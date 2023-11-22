@@ -60,6 +60,7 @@ def extract():
             "symbol": result.symbol,
             "current_price": result.current_price,
             "market_cap": result.market_cap,
+            "image": result.image,
             "market_cap_rank": result.market_cap_rank,
             "fully_diluted_valuation": result.fully_diluted_valuation,
             "total_volume": result.total_volume,

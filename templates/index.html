@@ -3,65 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptocurrency Dashboard</title>
+    <title>Cryptocurrency Project</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
     <header>        
         <div class="panel panel-primary">
             <div class="panel-heading">
-              <h3 class="panel-title">Cryptocurrency Info</h3>
+                <h3 class="panel-title">Cryptocurrency Info</h3>
             </div>
-          <body>
-          
-              <label for="search">Search:</label>
-              <input type="text" id="search" name="name" placeholder="Enter your cryptocurrency name">
-              <button type="submit">Search</button>                    
-
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="name" placeholder="Enter your cryptocurrency name">
+            <button type="submit">Search</button>
+        </div>
     </header>
     <aside>
-        <head>
-            <title>Go to Dashboard Button</title>
-          </head>
-          <body>
-            <button onclick="goToDashboard()">Go to Dashboard</button>
-          
-            <script>
-              function goToDashboard() {
-                
-                // Navigate to dashboard:                
-                window.location.href = "dashboard.html";
-              }
-            </script>
-          </body>
+        <button onclick="goToDashboard()">Go to Cryptocurrency Dashboard</button>
+        <script>
+            function goToDashboard() {
+                // Navigate to dashboard using Flask route:
+                window.location.href = "/dashboard";
+            }
+        </script>
     </aside>
     <main>
-        <div id="visualizations">
-            <div class="visualization" id="visualization1"></div> <!-- do not use, Jo used already-->
-            <div class="visualization" id="visualization2"></div>
-            <div class="visualization" id="visualization3"></div>
-            <div class="visualization" id="visualization4"></div>
-            <div class="visualization" id="visualization5"></div>
-
-            <!-- JavaScript file --> 
-            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-            <script src="https://d3js.org/d3.v5.min.js"></script>
-            
-          </div>
-<!-- this is for the main page, above is for the new html page-->
-          
-            <div id="sample-metadata" class="panel-body"></div>
-
-          <!-- JavaScript file -->            
-          <script src="static/js/crypto_metadata.js"></script>
-          <!-- <script src="static/js/plots.js"></script> -->
-          
-          </body>
-            
+        <div class="content">
+            <div id="sample-metadata" class="metadata"></div>
+            <div id="image" class="image-container"></div>
+            <div class="crypto-list">
+                <h5>List of Cryptocurrencies to search from:</h5>
+                <ul id="crypto-names"></ul>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </main>
     <footer>
-        <!-- Footer content goes here -->
+        <p>&copy; 2023 Crypto Info. All rights reserved.</p>
+        <p>&copy; Group 5 Project 3 - Nev, Jo, Kaiser, Iana, Saki.</p>
     </footer>
-    
+    <!-- JavaScript files -->
+    <script src="static/js/crypto_metadata.js"></script>
 </body>
 </html>
