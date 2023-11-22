@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Chart.js library -->
+    <!-- Link your JavaScript file -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        var MarketCap = {{ top_10_currencies|tojson }};
+    </script>
+</head>
+<body>
+        <div class="chart">
+            <h1>Crypto Dashboard</h1>
+    
+            <h2>Top 10 Market dominent Cryptocurrrencies</h2>
+            <canvas id="myChart"></canvas>
+        </div>    
+    <footer>
+        <p>&copy; 2023 Crypto Dashboard. All rights reserved.</p>
+        <p>Contact: nieveathan@outlook.com</p>
+        <!-- Other footer content goes here -->
+    </footer>
+</body>
+</html>
+
