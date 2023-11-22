@@ -4,21 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <header>
-        <!-- Header content goes here -->
+    <header>        
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Cryptocurrency Info</h3>
+            </div>
+          <body>
+          
+            <form action="/search" method="GET">
+              <label for="search">Search:</label>
+              <input type="text" id="search" name="name" placeholder="Enter your cryptocurrency name">
+              <button type="submit">Search</button>
+            </form>
+        
+
     </header>
     <aside>
-        <!-- Sidebar content goes here -->
+        <head>
+            <title>Go to Dashboard Button</title>
+          </head>
+          <body>
+            <button onclick="goToDashboard()">Go to Dashboard</button>
+          
+            <script>
+              function goToDashboard() {
+                
+                // Navigate to dashboard:                
+                window.location.href = "dashboard.html";
+              }
+            </script>
+          </body>
     </aside>
     <main>
-        <!-- Main content goes here -->
+        <div id="visualizations">
+            <div class="visualization" id="visualization1"></div> <!-- do not use, Jo used already-->
+            <div class="visualization" id="visualization2"></div>
+            <div class="visualization" id="visualization3"></div>
+            <div class="visualization" id="visualization4"></div>
+            <div class="visualization" id="visualization5"></div>
+
+            <!-- JavaScript file --> 
+            <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+            <script src="https://d3js.org/d3.v5.min.js"></script>
+            
+          </div>
+<!-- this is for the main page, above is for the new html page-->
+          
+            <div id="sample-metadata" class="panel-body"></div>
+            <ul id="list-holder">
+            </ul>
+
+          <!-- JavaScript file -->            
+          <script src="static/js/crypto_metadata.js"></script>
+          <script src="static/js/plots.js"></script>
+          
+          </body>
+            
     </main>
     <footer>
         <!-- Footer content goes here -->
     </footer>
-    <script src="script.js"></script>
+    
 </body>
 </html>
