@@ -1,33 +1,71 @@
-function updateMetaData(subjectMetadata) {
-  
-  let demoBox = d3.select("#visualisation1");
+// Fetch data and update dropdowns
+d3.json("static/data/all_dataJSON.json").then((data) => {
+  console.log(data);
 
+  var coinNames = data.map(item => item.name);
 
+  function updateDropdowns() {
+    var dropdown1 = d3.select("#dropdown1")
+    dropdown1.selectAll("option")
+      .data(coinNames)
+      .enter()
+      .append("option")
+      .attr("value", name => name)
+      .text(name => name);
 
-// Create the plot
-    // set variables for otu_ids and sample_values
-    let crypto_names = sample.otu_ids;
-    let sample_values = sample.sample_values;
-    let otu_labels = sample.otu_labels;
-  
-    let data = [{
-      type: 'bar',
-      orientation: 'h',
-      x: sample_values.slice(0, 10).reverse(),
-      y: otu_ids.slice(0, 10).map(id => `OTU ${id}`).reverse(),
-      text: otu_ids.slice(0, 10).map(id => `Name: ${otu_labels[otu_ids.indexOf(id)]}`).reverse(),
-      marker: {
-        color: sample_values.slice(0, 10),
-        colorscale: 'YlOrRd'
-      }
-    }]
-  
-    let layout =  {title: 'Top 10 OTUs found'}
-  
-    // Create a horizontal bar plot using Plotly
-    Plotly.newPlot("bar", data, layout);
+    var dropdown2 = d3.select("#dropdown2")
+    dropdown2.selectAll("option")
+      .data(coinNames)
+      .enter()
+      .append("option")
+      .attr("value", name => name)
+      .text(name => name);
+
+    // Event listeners for changes in dropdowns
+    document.getElementById('dropdown1').addEventListener('change', updateChart);
+    document.getElementById('dropdown2').addEventListener('change', updateChart);
   }
 
-//Append the plot
+  // Call updateDropdowns initially
+  updateDropdowns();
 
-}
+  function updateChart(selectedCoin) {
+    var selectedCoin1 = document.getElementById('dropdown1').value;
+    var selectedCoin2 = document.getElementById('dropdown2').value;
+  
+    var filteredData1 = data.filter(item => item.name == selectedCoin1);
+    var filteredData2 = data.filter(item => item.name == selectedCoin2);
+  
+    // Create traces for the bubble chart
+    var trace1 = {
+      x: [filteredData1[0].name,filteredData2[0].name],
+      y: [filteredData1[0].ath, filteredData2[0].ath],
+      name: 'All time high price',
+      type: 'bar'
+    };
+    console.log(trace1)
+
+    var trace2 = {
+      x: [filteredData2[0].name,filteredData1[0].name],
+      y: [filteredData2[0].atl, filteredData1[0].atl],
+      name: 'All time low price',
+      type: 'bar'
+    };
+    console.log(trace2)
+
+    // Define layout for the chart
+    var layout = {
+      title: 'Comparison of Selected Coins',
+      xaxis: { title: 'Coin Names' },
+      yaxis: { title: 'Price in US Dollars' },
+      barmode: 'group'
+    };
+    
+    // Combine traces into data array
+    var chartData = [trace1, trace2];
+    console.log(chartData)
+  
+    // Plot the chart
+    Plotly.newPlot("visualisation1", chartData, layout);
+  }
+})

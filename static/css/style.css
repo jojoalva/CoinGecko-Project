@@ -77,6 +77,25 @@ main {
     padding: 20px;
 }
 
+.charts-container {
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+}
+
+.chart {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  width: 50%;
+  height: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5em;
+}
 footer {
     background-color: rgb(129, 182, 236);
     color: #fff;
