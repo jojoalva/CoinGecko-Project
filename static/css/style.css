@@ -1,0 +1,93 @@
+/* style.css */
+
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+ 
+.content {
+    display: flex;
+  }
+  
+
+  .metadata {
+    flex: 1;
+    padding: 20px;
+    /* Add any other styles you want for the metadata */
+  }
+  
+  
+ 
+  .image-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+ 
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+header {
+    background-color: rgb(129, 182, 236);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.panel-heading {
+    font-size: 30px;  
+  }
+
+#search {
+    width: 300px;
+  }
+
+.crypto-list {
+    border: rgb(232, 243, 255);
+    background-color: rgb(232, 243, 255);
+    position: relative;
+    top: -50px;
+  }
+
+#crypto-names {
+  font-size: 10px;  
+}
+
+aside {
+    background-color: rgb(232, 243, 255);
+    width: 20%;
+    float: left;
+    padding: 20px;
+}
+
+main {
+    width: 80%;
+    float: right;
+    padding: 20px;
+}
+
+footer {
+    background-color: rgb(129, 182, 236);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    aside, main {
+        width: 100%;
+        float: none;
+    }
+}

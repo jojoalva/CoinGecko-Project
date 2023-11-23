@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cryptocurrency Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cryptocurrency Project</title>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-    <header>
-        <!-- Header content goes here -->
+    <header>        
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Cryptocurrency Info</h3>
+            </div>
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="name" placeholder="Enter your cryptocurrency name">
+            <button type="submit">Search</button>
+        </div>
     </header>
     <aside>
-        <!-- Sidebar content goes here -->
+        <button onclick="goToDashboard()">Go to Cryptocurrency Dashboard</button>
+        <script>
+            function goToDashboard() {
+                // Navigate to dashboard using Flask route:
+                window.location.href = "/dashboard";
+            }
+        </script>
     </aside>
     <main>
-        <!-- Main content goes here -->
+        <div class="content">
+            <div id="sample-metadata" class="metadata"></div>
+            <div id="image" class="image-container"></div>
+            <div class="crypto-list">
+                <h5>List of Cryptocurrencies to search from:</h5>
+                <ul id="crypto-names"></ul>
+            </div>
+        </div>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     </main>
     <footer>
-        <!-- Footer content goes here -->
+        <p>&copy; 2023 Crypto Info. All rights reserved.</p>
+        <p>&copy; Group 5 Project 3 - Nev, Jo, Kaiser, Iana, Saki.</p>
     </footer>
-    <script src="script.js"></script>
+    <!-- JavaScript files -->
+    <script src="static/js/crypto_metadata.js"></script>
 </body>
 </html>
