@@ -36,7 +36,7 @@ d3.json("static/data/all_dataJSON.json").then((data) => {
     var filteredData1 = data.filter(item => item.name == selectedCoin1);
     var filteredData2 = data.filter(item => item.name == selectedCoin2);
   
-    // Create traces for the bubble chart
+    // Create traces for the bar chart
     var trace1 = {
       x: [filteredData1[0].name,filteredData2[0].name],
       y: [filteredData1[0].ath, filteredData2[0].ath],

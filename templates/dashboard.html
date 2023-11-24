@@ -21,24 +21,45 @@
     <main>
         <div class="charts-container">
             <div class="chart">
-                <h2>Top 10 Market Dominant Cryptocurrencies</h2>
-                <canvas id="myChart"></canvas>
-            </div>
-        
-            <div class="chart">
                 <h2>Cryptocurrencies by all-time volatility</h2>
                 <div>
                     <select id="dropdown1"></select>                          
                         
                     <select id="dropdown2"></select>
                     
-                    <div id="visualisation1"></div>                    
+                    <div id="visualisation1"></div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="chart">
+                <h2>Coins by their circulating supply,
+                as a percentage of the total circulating supply</h2>
+                <div>
+                    <button id="topfive">Top Five Coins</button>
+        
+                    <button id="bottomfive">Bottom Five Coins</button>
+                                       
+                    <div id="visualisation2"></div>
                     
                 </div>
                 
             </div>
         </div>
+
+        <div class="chart">
+            <h2>Top 10 Market Dominant Cryptocurrencies</h2>
+            <div>                    
+                <div class="chart">                    
+                    <canvas id="myChart"></canvas>
+                </div>
+                
+            </div>
+            
+        </div>
         <script src="static/js/visualisations.js"></script>
+        <script src="static/js/pie.js"></script>
         <script src="static/js/script.js"></script>
 
     </main>    
