@@ -27,6 +27,7 @@ will use for our analysis.
 # Libraries/Frameworks:
 
 **We used the following libraries in our project:<br />
+<br />
     1. Pandas & Jupyter Notebook to clean the data and save it into SQLite3. Example below:<br />
     <br />
     <br />
@@ -47,14 +48,13 @@ will use for our analysis.
 
 # Languages:
 **Languages used in this project are:<br />
+<br />
     1. HTML and CSS to style and produce our webpage.<br />
-    <br />
     <br />
     ![<Main webpage](image-6.png)<br />
     <br />
     <br />
     2. Javascript to query the data from the JSON File and create the visualisations.<br />
-    <br />
     <br />
     ![This image shows our visualisations](image.png)
     ![This image shows another one of our visualisations](image-1.png)
@@ -63,23 +63,28 @@ will use for our analysis.
 
 # How to use:
 
-First, download this repository to your local drive.
-Go to your terminal and navigate into this repository.
-Type python app.py to load the local port where the project can be accessed.
+First, download this repository to your local drive.<br />
+Go to your terminal and navigate into this repository.<br />
+Type python app.py to load the local port where the project can be accessed.<br />
+<br />
 
-You should get a message that says "Running on http://127.0.0.1:5000".
-Ctrl + click on the highlighted IP Address.
-This will load the Flask APP on your browser.
+You should get a message that says "Running on http://127.0.0.1:5000".<br />
+Ctrl + click on the highlighted IP Address.<br />
+This will load the Flask APP on your browser.<br />
+<br />
 
 From here, you can select the api/metadata route to view the metadata.
+<br />
 
-To access the first page, you can select the /html/metadata route.
-This will take you to our homepage of our website.
-Here, you can select a coin from the list on the right hand side to query the metadata for each coin.
+To access the first page, you can select the /html/metadata route.<br />
+This will take you to our homepage of our website.<br />
+Here, you can select a coin from the list on the right hand side to query the metadata for each coin.<br />
+<br />
 
-Next, select the Go To Dashboard button, which will take you to our dashboard page.
-On this page, you can view the below charts and interact with them.
-This will allow you to visualise some data from our database.
+Next, select the Go To Dashboard button, which will take you to our dashboard page.<br />
+On this page, you can view the below charts and interact with them.<br />
+This will allow you to visualise some data from our database.<br />
+<br />
 
 # Programs required:
 The prerequisites you require to run our project are:
