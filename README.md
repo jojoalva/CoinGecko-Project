@@ -63,28 +63,28 @@ will use for our analysis.
 
 # How to use:
 
-First, download this repository to your local drive.<br />
-Go to your terminal and navigate into this repository.<br />
-Type python app.py to load the local port where the project can be accessed.<br />
-<br />
+        First, download this repository to your local drive.<br />
+        Go to your terminal and navigate into this repository.<br />
+        Type python app.py to load the local port where the project can be accessed.<br />
+        <br />
 
-You should get a message that says "Running on http://127.0.0.1:5000".<br />
-Ctrl + click on the highlighted IP Address.<br />
-This will load the Flask APP on your browser.<br />
-<br />
+        You should get a message that says "Running on http://127.0.0.1:5000".<br />
+        Ctrl + click on the highlighted IP Address.<br />
+        This will load the Flask APP on your browser.<br />
+        <br />
 
-From here, you can select the api/metadata route to view the metadata.
-<br />
+        From here, you can select the api/metadata route to view the metadata.
+        <br />
 
-To access the first page, you can select the /html/metadata route.<br />
-This will take you to our homepage of our website.<br />
-Here, you can select a coin from the list on the right hand side to query the metadata for each coin.<br />
-<br />
+        To access the first page, you can select the /html/metadata route.<br />
+        This will take you to our homepage of our website.<br />
+        Here, you can select a coin from the list on the right hand side to query the metadata for each coin.<br />
+        <br />
 
-Next, select the Go To Dashboard button, which will take you to our dashboard page.<br />
-On this page, you can view the below charts and interact with them.<br />
-This will allow you to visualise some data from our database.<br />
-<br />
+        Next, select the Go To Dashboard button, which will take you to our dashboard page.<br />
+        On this page, you can view the visualisations and interact with them.<br />
+        This will allow you to visualise some data from our database (via the created json file).<br />
+        <br />
 
 # Programs required:
 The prerequisites you require to run our project are:
