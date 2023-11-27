@@ -26,7 +26,7 @@ will use for our analysis.
 
 # Libraries/Frameworks:
 
-We used the following libraries in our project:<br />
+**We used the following libraries in our project:<br />
     1. Pandas & Jupyter Notebook to clean the data and save it into SQLite3. Example below:<br />
     ![Jupyter notebook](image-3.png)<br />
     <br />
@@ -37,10 +37,10 @@ We used the following libraries in our project:<br />
     <br />
     3. Flask to locally host our webpage.
     ![Flack app](image-4.png)<br />
-    <br />
+    <br />**
 
 # Languages:
-Languages used in this project are:<br />
+**Languages used in this project are:<br />
     1. HTML and CSS to style and produce our webpage.<br />
     ![<Main webpage](image-6.png)<br />
     <br />
@@ -49,7 +49,7 @@ Languages used in this project are:<br />
     ![This image shows our visualisations](image.png)
     ![This image shows another one of our visualisations](image-1.png)
     ![This image shows another one of our visualisations](image-2.png)<br />
-    <br />
+    <br />**
 
 # How to use:
 
