@@ -29,19 +29,27 @@ will use for our analysis.
 We used the following libraries in our project:<br />
     1. Pandas & Jupyter Notebook to clean the data and save it into SQLite3. Example below:<br />
     ![Jupyter notebook](image-3.png)<br />
+    <br />
+    <br />
     2. D3.js, Plotly.js and Charts.js to help us analyse and visualise our data. Example below:<br />
     ![Visualisation example](image-5.png)<br />
+    <br />
+    <br />
     3. Flask to locally host our webpage.
     ![Flack app](image-4.png)<br />
+    <br />
 
 # Languages:
 Languages used in this project are:<br />
     1. HTML and CSS to style and produce our webpage.<br />
     ![<Main webpage](image-6.png)<br />
+    <br />
+    <br />
     2. Javascript to query the data from the JSON File and create the visualisations.<br />
     ![This image shows our visualisations](image.png)
     ![This image shows another one of our visualisations](image-1.png)
     ![This image shows another one of our visualisations](image-2.png)<br />
+    <br />
 
 # How to use:
 
