@@ -7,9 +7,10 @@ let sorted = data.sort(function sortFunction(a,b) {
       return b.circulating_supply - a.circulating_supply;
   }); 
 
-let sliced1 = sorted.slice(94, 100);
+let sliced1 = sorted.toReversed().slice(0, 5);
 let sliced2 = sorted.slice(0, 5);
 console.log(sliced2)
+
 // total circulating supply of bottom 5
 function totalCirculating1() {
     let total = 0;
@@ -53,7 +54,9 @@ function bottomFive() {
   var pieData = [{
     values: currentSupplypercentage,
     labels: labels,
-    type: 'pie'
+    type: 'pie',
+    sort: false,
+    direction: 'clockwise'
   }];
 
   var layout = {

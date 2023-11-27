@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }]
         },
         options: {
+            responsive: false,
+            maintainAspectRatio: true,
             scales: {
                 y: {
                     beginAtZero: true // Start y-axis at 0
