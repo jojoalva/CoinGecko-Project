@@ -8,7 +8,7 @@ A project to analyse cryptocurrency data, from data obtained through CoinGecko A
 [Libraries](#libraries)<br />
 [Languages](#languages)<br />
 [How to use](#how-to-use)<br />
-[Programs required](#programs-required)
+[Programs or languages required](#programs-or-languages-required)
 
 # Team:
 
@@ -86,13 +86,25 @@ will use for our analysis.
         This will allow you to visualise some data from our database (via the created json file).<br />
         <br />
 
-# Programs required:
+# Programs or languages required:
+<br />
 The prerequisites you require to run our project are:
 
 Jupyter Notebook <br />
 Python <br />
+Pandas <br />
+Requests <br />
+Numpy <br />
+Flask <br />
+Json <br />
 SQLite3 <br />
+SQLAlchemy <br />
 Javascript <br />
+Plotly.js <br />
+D3.js <br />
+Chart.js <br />
+
+
 
 
 
